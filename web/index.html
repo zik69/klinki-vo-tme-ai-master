@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Клинки во тьме — ИИ-мастер</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Клинки во тьме</h1>
+      <p class="subtitle">Игра с ИИ-мастером</p>
+    </header>
+    <main>
+      <section id="start-screen" class="screen active">
+        <h2>Добро пожаловать в Дасквол</h2>
+        <p>Собери банду из четырёх персонажей и отправляйся на дела.</p>
+        <button id="btn-start" class="btn">Начать игру</button>
+      </section>
+
+      <section id="gang-screen" class="screen">
+        <h2>Создание банды</h2>
+        <p>Персонажей: <span id="gang-count">0</span>/4</p>
+        <div id="gang-list"></div>
+
+        <div class="create-panel">
+          <h3>Создать персонажа</h3>
+          <input type="text" id="char-name" placeholder="Имя" />
+          <select id="char-origin"></select>
+          <select id="char-past"></select>
+          <div id="skills-container"></div>
+          <select id="char-talent"></select>
+          <select id="char-passion"></select>
+          <button id="btn-add-char" class="btn">Добавить в банду</button>
+        </div>
+
+        <div class="pregen-panel">
+          <h3>Шаблоны (прегены)</h3>
+          <button id="btn-pregen-all" class="btn">Загрузить шаблонную банду</button>
+        </div>
+
+        <button id="btn-to-game" class="btn" disabled>В игру</button>
+      </section>
+
+      <section id="game-screen" class="screen">
+        <h2>Игровой экран</h2>
+        <p>Банда создана. Игра в разработке.</p>
+        <div id="game-gang"></div>
+      </section>
+    </main>
+  </div>
+  <script src="js/characters.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
